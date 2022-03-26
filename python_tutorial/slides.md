@@ -97,6 +97,90 @@ z = True
 - 字串：`str`
 - Boolean：`bool`
 
+----
+
+## 數值運算
+
+```python
+num = 12 + 3
+print(f"12 + 3 = {num}")
+num = 43 - 32
+print(f"43 - 32 = {num}")
+num = 3 * 8
+print(f"3 * 8 = {num}")
+num = 3 ** 8
+print(f"3 ** 8 = {num}")
+num = 19 / 3
+print(f"19 / 3 = {num}")
+num = 19 % 3
+print(f"19 % 3 = {num}")
+num = 19 // 3
+print(f"19 // 3 = {num}")
+```
+
+----
+
+## 數值運算
+
+```
+12 + 3 = 15
+43 - 32 = 11
+3 * 8 = 24
+3 ** 8 = 6561
+19 / 3 = 6.333333333333333
+19 % 3 = 1
+19 // 3 = 6
+```
+
+---
+
+## 字串
+
+- 字串：以雙引號或單引號匡著文字
+```python
+string = "青山"
+print(string)
+```
+```
+青山
+```
+- 字串也可以先乘後加
+```python
+string ="很重要！" * 3 + "所以說三次"
+print(string)
+```
+```
+很重要！很重要！很重要！所以說三次
+```
+- `python`裡，座號是從 0 開始。
+```python
+print(string[0])
+```
+```
+很
+```
+
+----
+
+## 字串
+
+- 換行可以用 `\n`
+```python
+string = "希望我講課的時候，\n烏克蘭已經得到和平"
+print(string)
+```
+```
+希望我講課的時候，
+烏克蘭已經得到和平
+```
+- 如果文字很多段，可以用 3 + 3 個雙引號包起來
+```python
+string = """
+希望我講課的時候，
+烏克蘭已經得到和平
+"""
+print(string)
+```
 
 ---
 
@@ -108,12 +192,146 @@ z = True
 - 集合：`set`
 - 字典：`dict`
 
----
-
-## 數值: `int` and `float`
 
 
----
+----
 
 
 
+## 列表 `list`
+
+- 有序且可變
+
+
+```python
+data = [1, "a", True]
+print(data)
+```
+```
+[1, 'a', True]
+```
+```python
+print(data[0])
+data[2] = False
+print(data[2])
+```
+```
+0
+False
+```
+
+----
+
+## 列表 `list`
+- 用 `list` 和 `range` 產生列表
+
+```python
+data = list(range(5))
+print(data)
+```
+```
+[0, 1, 2, 3, 4]
+```
+
+----
+
+
+## 列表 `tuple`
+
+
+- 有序且不可變
+```python
+data = (1, "a", True)
+print(data)
+print(data[0])
+```
+```
+(1, 'a', True)
+1
+```
+- 用 `tuple` 和 `range` 產生列表
+```python
+data = tuple(range(5))
+print(data)
+```
+```
+[0, 1, 2, 3, 4]
+```
+
+----
+
+## 列表 `tuple`
+
+- 如果試著改變某個元素
+
+```python
+data[2] = False
+```
+![](media/tuple_error.png)
+
+----
+
+## 列表
+- `list` 和 `tuple` 互換
+
+```python
+data = list(data)
+print(data)
+data = tuple(data)
+print(tuple)
+```
+```
+[0, 1, 2, 3, 4]
+(0, 1, 2, 3, 4)
+```
+
+----
+
+## 集合 `set`
+
+```python
+data = {12, "a", "b"}
+print(data)
+```
+```
+{12, "a", "b"}
+```
+- 檢查資料是否包含某值
+
+```python
+print("a" in data)
+```
+```
+True
+```
+
+----
+
+## 集合 `set`
+- 交集
+
+```python
+data_new = {2, "b", True, False}
+print(data & data_new)
+```
+
+```
+{"b"}
+```
+- 聯集
+
+```python
+print(data | data_new)
+```
+```
+{False, True, 2, 'b', 12, 'a'}
+```
+
+- 差集
+
+```python
+print(data - data_new)
+```
+```
+{12, 'a'}
+```
