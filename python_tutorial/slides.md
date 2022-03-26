@@ -335,3 +335,37 @@ print(data - data_new)
 ```
 {12, 'a'}
 ```
+
+----
+
+## 字典 `dict`
+
+- key 與 value 的組合
+- 可用 key 找到對應的 value
+- 只能查詢 key 是否存在於字典中，無法查詢 value
+```python
+data = {"三月":"March", "四月":"April", "one":1}
+print(data["三月"]) # “March"
+print("三月" in data) # 印出True
+print("March" in data) # 印出False
+```
+- 也可以用`dict`產生字典
+```python
+data = dict(三月="March", 四月="April", one=1)
+print(data)
+```
+
+
+---
+
+## function of `dict`
+```python
+print(data.keys())
+print(data.values())
+print(data.items())
+```
+```
+dict_keys(['三月', '四月', 1])
+dict_values(['March', 'April', 'one'])
+dict_items([('三月', 'March'), ('四月', 'April'), (1, 'one')])
+```
