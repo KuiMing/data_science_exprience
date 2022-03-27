@@ -439,3 +439,10 @@ dict_items([('三月', 'March'), ('四月', 'April'), (1, 'one')])
 
 ---
 
+## 其他常用 function
+
+```python
+type(data) # 檢查資料型態
+len(data) # 資料長度
+```
+
