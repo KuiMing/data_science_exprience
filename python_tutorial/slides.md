@@ -384,12 +384,44 @@ print(data["三月"]) # “March"
 print("三月" in data) # 印出True
 print("March" in data) # 印出False
 ```
+```
+{'三月': 'March', '四月': 'April', 'one': 1}
+March
+True
+False
+```
+
+----
+
+## 字典 `dict`
+
 - 也可以用`dict`產生字典
 ```python
 data = dict(三月="March", 四月="April", one=1)
+```
+- 增加新的 key-value 組合，或更改某個 key 的 value
+```python
+data['two'] = 2
+data['one'] = '一'
 print(data)
 ```
+```
+{'三月': 'March', '四月': 'April', 'one': '一', 'two': 2}
+```
 
+----
+
+## 字典 `dict`
+
+- 移除 key-value
+- 若移除不存在的 key-value，會出現<font color=red>Error</font>
+```python
+del data['one']
+print(data)
+```
+```
+{'三月': 'March', '四月': 'April', 'two': 2}
+```
 
 ----
 
@@ -407,7 +439,3 @@ dict_items([('三月', 'March'), ('四月', 'April'), (1, 'one')])
 
 ---
 
-```python
-type(data)
-len(data)
-```
