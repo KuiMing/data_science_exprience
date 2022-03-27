@@ -89,7 +89,7 @@ z = True
 - 英文字母大小寫是不同的：input_1 和 Input_1 是不同變數
 - 不可使用保留字：有些字詞本身有功能，不可以當作變數，例如if, and, else, or...等等。
 
----
+----
 
 ## 資料型態
 
@@ -132,7 +132,7 @@ print(f"19 // 3 = {num}")
 19 // 3 = 6
 ```
 
----
+----
 
 ## 字串
 
@@ -231,6 +231,41 @@ print(data)
 ```
 ```
 [0, 1, 2, 3, 4]
+```
+
+----
+
+## function of `list` 
+- 加一個新的元素
+```python
+data.append(17)
+```
+```
+[0, 1, 2, 3, 4, 17]
+```
+- 跟另一個 `list` 合併，增加更多元素
+```python
+data.extend([10, 67, 23])
+```
+```
+[0, 1, 2, 3, 4, 17, 10, 67, 23]
+```
+----
+
+## function of `list` 
+- 太混亂的話，可以排序一下
+```python
+data.sort()
+```
+```
+[0, 1, 2, 3, 4, 10, 17, 23, 67]
+```
+- 把不喜歡的元素移除
+```python
+data.remove(67)
+```
+```
+[0, 1, 2, 3, 4, 10, 17, 23]
 ```
 
 ----
@@ -356,7 +391,7 @@ print(data)
 ```
 
 
----
+----
 
 ## function of `dict`
 ```python
@@ -368,4 +403,11 @@ print(data.items())
 dict_keys(['三月', '四月', 1])
 dict_values(['March', 'April', 'one'])
 dict_items([('三月', 'March'), ('四月', 'April'), (1, 'one')])
+```
+
+---
+
+```python
+type(data)
+len(data)
 ```
