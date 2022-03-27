@@ -437,6 +437,8 @@ dict_values(['March', 'April', 'one'])
 dict_items([('三月', 'March'), ('四月', 'April'), (1, 'one')])
 ```
 
+
+
 ----
 
 ## 其他常用 function
@@ -556,4 +558,192 @@ for i in ["545", "(545)5(54322)", "7(23)", "356", "567"]:
 7(23)
 356
 567
+```
+---
+
+## 函式 function
+
+- 可以重複使用的工具
+- Ben 考試得分獎懲辦法
+
+```python
+def score_award(score, money, time):
+    if score == 100:
+        money += 100
+    elif score >= 90:
+        money += 50
+    else:
+        time += 60
+    return money, time
+```
+
+```python
+allowance, study_time = score_award(100, 0, 30)
+print(f"零用錢：{allowance}")
+print(f"讀書時間：{study_time}")
+```
+
+----
+
+
+## 函式應用題
+
+- 把 `print`、`dict`加進函式
+- Ben 這禮拜考了三科：
+  - 國文：100 分
+  - 英文：90 分
+  - 數學：85 分
+- 請問他可以得到多少零用錢，將會額外多出多少讀書時間
+- 提示：
+  - 可以把分數變成 `list`
+  - 用 `for` 反覆取得結果
+  - 函式的輸出應該為 `dict`
+
+
+----
+
+## 定義函式
+
+```python
+
+def score_award(score, money=0, time=0):
+    # money 和 time 預設為 0，
+    if score == 100:
+        money += 100
+    elif score >= 90:
+        money += 50
+    else:
+        time += 60
+    print(f"零用錢：{money}")
+    print(f"讀書時間：{time}")
+    return dict(money=money, time=time)
+```
+
+----
+
+## 使用函式
+
+```python
+scores = [100, 90, 85]
+allowence = 0
+study_time = 0
+for i in scores:
+    ans = score_award(i, allowence, study_time)
+    allowence = ans["money"]
+    study_time = ans["time"]
+```
+```
+零用錢：100
+讀書時間：0
+零用錢：150
+讀書時間：0
+零用錢：150
+讀書時間：60
+```
+
+----
+
+## 也可以這樣做
+
+- 提示輸入值和輸出值的型態
+```python
+def score_award(score: int, money: int, time: int) -> int:
+    if score == 100:
+        money += 100
+    elif score >= 90:
+        money += 50
+    else:
+        time += 60
+    return money, time
+```
+
+
+---
+
+## 類別 `class`
+
+----
+
+## 物件導向
+
+- 以物件為主
+- 物件：
+  - 物件是類別的實例
+  - 根據某個類別規則存在於電腦裡的資料
+- 類別：
+  - 定義某一種類物件的行為與規則
+
+----
+## 物件導向
+
+![](media/object.png)
+
+<font size=1>https://home.gamer.com.tw/creationDetail.php?sn=4003272</font>
+
+
+----
+
+## 宣告類別
+
+- 做一個計算獎懲的 class
+
+```python [1-6|7-17]
+class ScoreAward():
+  # 定義初始化函式
+  def __init__(self, score: int) -> None:
+    self.score = score
+    self.money = 0
+    self.time = 0
+  # 定義實體方法（instance method）
+  def score_award(self) -> dict:
+    if self.score == 100:
+        self.money += 100
+    elif self.score >= 90:
+        self.money += 50
+    else:
+        self.time += 60
+    print(f"零用錢：+ {self.money}")
+    print(f"讀書時間：+ {self.time}")
+    return dict(money=self.money, time=self.time)
+```
+
+----
+
+## 執行類別
+
+- 利用類別建立實體物件
+- 不同科目，得到不同的分數與獎懲
+```python
+chinese = ScoreAward(100)
+english = ScoreAward(90)
+mathematics = ScoreAward(85)
+```
+- 執行實體方法
+```python
+chinese.score_award()
+english.score_award()
+mathematics.score_award()
+```
+----
+
+## 查看各項屬性
+
+```python
+print(english.score)
+print(english.money)
+print(english.time)
+```
+```
+90
+50
+0
+```
+
+---
+
+
+```python
+import 模組名稱 as 模組暱稱（方便使用的名稱）
+from 模組名稱 import 函式名稱 as 函式暱稱
+from 模組名稱 import 變數名稱, 函式名稱1, 函式名稱2 
 ```
