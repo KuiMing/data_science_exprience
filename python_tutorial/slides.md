@@ -461,6 +461,7 @@ score = 100 # 國文考一百
 money = 0 # 本來零用錢用光了
 if score == 100:
     money += 100
+print(f"money: {money}")
 ```
 
 ----
@@ -474,6 +475,7 @@ if score == 100:
     money += 100
 elif score >= 90:
     money += 50
+print(f"money: {money}")
 ```
 
 ----
@@ -482,6 +484,7 @@ elif score >= 90:
 
 - 除此之外，就必須多 60 分鐘讀書時間。
 ```python
+score = 85 # 數學
 time = 30 # 原本只有 30 分鐘
 if score == 100:
     money += 100
@@ -489,5 +492,68 @@ elif score >= 90:
     money += 50
 else:
     time += 60
+print(f"money: {money}")
+print(f"time: {time}")
 ```
 
+----
+
+## while
+
+- 巧克力還有啊～～請幫忙把巧克力吃完
+
+```python
+chocolate = 10
+while chocolate > 0:
+    chocolate -= 1
+    print(chocolate)
+```
+
+----
+
+## for loop
+
+- 請小朋友跳 10 下跳繩
+- `range`：
+  - 從零開始
+  - 可以指定特定數字開始，在特定數字前結束
+
+```python
+for i in range(1, 11):
+  print(f"跳繩{i}下")
+
+```
+```
+跳繩1下
+跳繩2下
+跳繩3下
+跳繩4下
+跳繩5下
+跳繩6下
+跳繩7下
+跳繩8下
+跳繩9下
+跳繩10下
+
+```
+
+----
+
+
+## for loop
+
+- 請小朋友吹一小段直笛
+
+```python
+print("直笛簡譜")
+for i in ["545", "(545)5(54322)", "7(23)", "356", "567"]:
+  print(i)
+```
+```
+直笛簡譜
+545
+(545)5(54322)
+7(23)
+356
+567
+```
