@@ -437,12 +437,57 @@ dict_values(['March', 'April', 'one'])
 dict_items([('三月', 'March'), ('四月', 'April'), (1, 'one')])
 ```
 
----
+----
 
 ## 其他常用 function
 
 ```python
 type(data) # 檢查資料型態
 len(data) # 資料長度
+```
+
+---
+
+## 判斷與迴圈
+
+
+----
+
+## if
+
+- 如果 Ben 考試考一百，Ben 就會得到 100 元獎勵。
+```python
+score = 100 # 國文考一百
+money = 0 # 本來零用錢用光了
+if score == 100:
+    money += 100
+```
+
+----
+
+## elif
+
+- 承上，如果考 90 分以上，也能得到 50 元獎勵。
+```python
+score = 90 # 英文考90分
+if score == 100:
+    money += 100
+elif score >= 90:
+    money += 50
+```
+
+----
+
+## else
+
+- 除此之外，就必須多 60 分鐘讀書時間。
+```python
+time = 30 # 原本只有 30 分鐘
+if score == 100:
+    money += 100
+elif score >= 90:
+    money += 50
+else:
+    time += 60
 ```
 
