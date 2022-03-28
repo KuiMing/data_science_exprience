@@ -2,30 +2,29 @@
 
 ---
 
-## What is python
+## What is Python
+
+- 命名由來：Monty Python's Flying Circus
+- 高階程式語言
+- 通用型程式語言
+- 物件導向
 
 ---
 
 ## Google Colab
 
----
+----
 
-## Integrated Development Environment
-
-整合開發環境
-
-
----
-
-
-### Google Colab
-
+## Google Colab
+- IDE
+  - Integrated Development Environment 
+  - 整合開發環境
 - python 3.7.12
 - 免費CPU虛擬機
 - 可用瀏覽器操作
 - 可以與他人共用
 
----
+----
 
 ### 取得教學範例
 
