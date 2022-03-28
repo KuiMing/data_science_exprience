@@ -212,11 +212,13 @@ print(data)
 ```
 ```python
 print(data[0])
+print(data[0:2])
 data[2] = False
 print(data[2])
 ```
 ```
 0
+[1, 'a']
 False
 ```
 
@@ -687,14 +689,16 @@ def score_award(score: int, money: int, time: int) -> int:
 
 - 做一個計算獎懲的 class
 
-```python [1-6|7-17]
+```python [1-9|10-24]
 class ScoreAward():
   # 定義初始化函式
-  def __init__(self, score: int) -> None:
+  # 利用 self 傳遞參數
+  def __init__(self, score: int, subject: str) -> None:
     self.score = score
+    self.subject = subject
     self.money = 0
     self.time = 0
-  # 定義實體方法（instance method）
+
   def score_award(self) -> dict:
     if self.score == 100:
         self.money += 100
@@ -704,7 +708,11 @@ class ScoreAward():
         self.time += 60
     print(f"零用錢：+ {self.money}")
     print(f"讀書時間：+ {self.time}")
-    return dict(money=self.money, time=self.time)
+    return dict(
+        subject=self.subject, 
+        score=self.score, 
+        money=self.money, 
+        time=self.time)
 ```
 
 ----
@@ -714,36 +722,165 @@ class ScoreAward():
 - 利用類別建立實體物件
 - 不同科目，得到不同的分數與獎懲
 ```python
-chinese = ScoreAward(100)
-english = ScoreAward(90)
-mathematics = ScoreAward(85)
+chinese = ScoreAward(100, "Chinese")
+english = ScoreAward(90, "English")
+mathematics = ScoreAward(85, "Mathematics")
 ```
 - 執行實體方法
 ```python
-chinese.score_award()
-english.score_award()
 mathematics.score_award()
 ```
+```
+零用錢：+ 0
+讀書時間：+ 120
+{'money': 0, 'score': 85, 'subject': 'Mathematics', 'time': 120}
+```
+
+----
+
+## 查看各項屬性
+- 輸入<font color=red>`english.`</font>之後，稍微等一下，會出現屬性與方法
+![](media/hint.png)
+
 ----
 
 ## 查看各項屬性
 
 ```python
+print(english.subject)
 print(english.score)
 print(english.money)
 print(english.time)
 ```
 ```
+English
 90
 50
 0
 ```
 
+----
+
+## 整理成績
+
+- 用 `list` 和 `dict` 整理成績
+- 包含科目、分數、增加的零用錢與讀書時間
+
+```python
+score_list = [
+    dict(subject="Chinese", score=100),
+    dict(subject="English", score=90),
+    dict(subject="Mathematics", score=85),
+    ]
+
+score_award_list = []
+for i in score_list:
+    score_object = ScoreAward(i["score"], i["subject"])
+    award = score_object.score_award()
+    score_award_list.append(award)
+```
+
+----
+
+## 整理成績
+
+```python
+score_award_list
+```
+```
+[{'money': 100, 'score': 100, 'subject': 'Chinese', 'time': 0},
+ {'money': 50, 'score': 90, 'subject': 'English', 'time': 0},
+ {'money': 0, 'score': 85, 'subject': 'Mathematics', 'time': 60}]
+
+```
+
 ---
 
+## 模組
 
 ```python
 import 模組名稱 as 模組暱稱（方便使用的名稱）
 from 模組名稱 import 函式名稱 as 函式暱稱
 from 模組名稱 import 變數名稱, 函式名稱1, 函式名稱2 
 ```
+
+
+----
+
+## 成績獎懲紀錄
+
+```python
+import pandas as pd
+score_award_df = pd.DataFrame(score_award_list)
+score_award_df
+```
+
+![](media/DataFrame.png)
+
+----
+
+## 互動式圖表
+
+```python
+import plotly.express as px
+figure = px.bar(
+    score_award_df, x="score", y="subject",
+    title="Score", orientation="h")
+figure.update_layout(font=dict(size=20))
+figure.show()
+```
+
+<iframe src=media/score.html width="1000" height="400">
+
+
+----
+
+## 安裝套件
+
+- colab 基本上提供了大部分常用的套件
+- 利用 pip 來
+  - 察看套件
+```bash
+!pip freeze
+```
+  - 安裝套件
+    - 指定版本
+```bash
+!pip install cowpy==1.1.5 # 安裝指定版本
+```
+```bash
+!pip install cowpy # 預設是安裝最新版本
+```
+- 注意：只有在 colab 或者 jupyter notebook 才需要在前面加驚嘆號`!`
+
+----
+
+## 試用新套件
+
+```python
+from cowpy import cow
+
+tiger = cow.Meow()
+msg = tiger.milk("虎犀利")
+print(msg)
+```
+
+```r
+ _____ 
+< 虎犀利 >
+ ----- 
+  \
+   \ ,   _ ___.--'''`--''//-,-_--_.
+      \`"' ` || \\ \ \\/ / // / ,-\\`,_
+     /'`  \ \ || Y  | \|/ / // / - |__ `-,
+    /\@"\  ` \ `\ |  | ||/ // | \/  \  `-._`-,_.,
+   /  _.-. `.-\,___/\ _/|_/_\_\/|_/ |     `-._._)
+   `-'``/  /  |  // \__/\__  /  \__/ \
+        `-'  /-\/  | -|   \__ \   |-' |
+          __/\ / _/ \/ __,-'   ) ,' _|'
+         (((__/(((_.' ((___..-'((__,'
+```
+
+---
+
+# Thank you!
