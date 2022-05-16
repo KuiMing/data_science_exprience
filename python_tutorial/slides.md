@@ -48,6 +48,11 @@ https://colab.research.google.com/drive/1SnqHaVUk-QjUxi5ieexneYFUoJNrNR2g?usp=sh
 - 輸入 `print("hello world")
 - CTRL (或者 command) + ENTER 或者 按下 ▶️
 ![](media/colab_3.png)
+
+----
+
+## 執行程式碼
+
 - 注意事項：如果長時間不使用，會被斷線，重新連線之後，寫過的程式碼會被保留，但需要重新執行。
   - 連續使用時間限制：12 小時
   - 閒置時間限制：90 分鐘
