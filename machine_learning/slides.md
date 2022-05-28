@@ -692,6 +692,26 @@ model.fit(
 
 ## Deep Learning
 
+- Based on Artificial Neural Network
+
+![](media/neuron.png)
+
+
+
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://www.researchgate.net/figure/A-diagram-showing-a-neuron-making-a-synaptic-connection-with-another-neuron_fig1_258023902</font>
+
+----
+
+## Deep Learning
+
+![](media/neuron_connection.jpeg)
+
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://www.quora.com/How-can-I-make-new-connections-between-the-neurons-of-my-brain</font>
+
+
+
 ----
 
 <!-- .slide: data-background-iframe="https://playground.tensorflow.org/" -->
