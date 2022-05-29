@@ -28,16 +28,17 @@
 
 ### 取得教學範例
 
-https://colab.research.google.com/drive/1SnqHaVUk-QjUxi5ieexneYFUoJNrNR2g?usp=sharing
-
+- tutorial
+  - https://reurl.cc/9GnYK8
 - 先儲存副本：檔案-->在雲端硬碟中儲存副本
 ![](media/colab_1.png)
-- 若尚未登入 google 帳號，會被要求登入
+
 
 ----
 
-## 取得教學範例 
+### 取得教學範例 
 
+- 若尚未登入 google 帳號，會被要求登入
 - 視個人情況更改檔名
 ![](media/colab_2.png)
 

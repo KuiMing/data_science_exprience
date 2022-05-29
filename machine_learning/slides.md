@@ -23,6 +23,18 @@
 ----
 
 
+## 取得教學範例
+
+- machine learning
+  - https://reurl.cc/DyOQ2d
+- LeNet
+  - https://reurl.cc/k1ojeb
+- face recognition
+  - https://reurl.cc/d2aj36
+
+
+----
+
 ## 今日檔案
 
 - 請先下載這些檔案，並上傳到Colab

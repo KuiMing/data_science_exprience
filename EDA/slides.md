@@ -281,11 +281,11 @@ https://about.netflix.com/zh_tw
 ----
 
 ## 取得教學範例
-
-https://colab.research.google.com/drive/1CUyaIm_BfEXy1JeQ7RFfVEZCBUx02dmm?usp=sharing
-
+- Netflix
+  - https://reurl.cc/6Zq3z5
+- salary
+  - https://reurl.cc/2ZQkdm
 - 先儲存副本：檔案-->在雲端硬碟中儲存副本
-![](media/colab_1.png)
 - 若尚未登入 google 帳號，會被要求登入
 
 ----
