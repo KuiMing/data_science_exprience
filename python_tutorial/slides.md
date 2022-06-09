@@ -320,12 +320,21 @@ data[2] = False
 data = list(data)
 print(data)
 data = tuple(data)
-print(tuple)
+print(data)
 ```
 ```
 [0, 1, 2, 3, 4]
 (0, 1, 2, 3, 4)
 ```
+
+----
+
+## 集合 `set`
+
+- 無法用 index 選擇元素
+- 無序
+- 不可變
+- 不可重複
 
 ----
 
@@ -382,6 +391,7 @@ print(data - data_new)
 
 ## 字典 `dict`
 
+- 有序且可變
 - key 與 value 的組合
 - 可用 key 找到對應的 value
 - 只能查詢 key 是否存在於字典中，無法查詢 value
@@ -455,6 +465,11 @@ type(data) # 檢查資料型態
 len(data) # 資料長度
 ```
 
+----
+
+<img src="media/data_structure.jpeg" width="50%">
+
+
 ---
 
 ## 判斷與迴圈
@@ -462,7 +477,7 @@ len(data) # 資料長度
 
 ----
 
-## if
+## `if`
 
 - 如果 Ben 考試考一百，Ben 就會得到 100 元獎勵。
 ```python
@@ -470,7 +485,7 @@ score = 100 # 國文考一百
 money = 0 # 本來零用錢用光了
 if score == 100:
     money += 100
-print(f"money: {money}")
+print(f"零用錢: {money}")
 ```
 
 ----
@@ -484,7 +499,7 @@ if score == 100:
     money += 100
 elif score >= 90:
     money += 50
-print(f"money: {money}")
+print(f"零用錢: {money}")
 ```
 
 ----
@@ -501,8 +516,8 @@ elif score >= 90:
     money += 50
 else:
     time += 60
-print(f"money: {money}")
-print(f"time: {time}")
+print(f"零用錢: {money}")
+print(f"讀書時間: {time}")
 ```
 
 ----
