@@ -1,5 +1,8 @@
 # Machine Learning
 
+
+#### 講者：陳奎銘 `Benjamin Chen`
+
 ---
 
 ![](media/solution_1.png)

@@ -1,5 +1,6 @@
 # Data Science
 
+#### 講者：陳奎銘 `Benjamin Chen`
 
 ---
 

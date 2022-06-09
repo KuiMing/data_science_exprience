@@ -1,5 +1,8 @@
 # Python Tutorial
 
+
+#### 講者：陳奎銘 `Benjamin Chen`
+
 ---
 
 ## What is Python

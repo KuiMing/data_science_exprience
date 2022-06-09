@@ -1,5 +1,8 @@
 # Exploratory Data Analysis
 
+
+#### 講者：陳奎銘 `Benjamin Chen`
+
 ---
 
 ## Outline
