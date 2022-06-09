@@ -490,7 +490,7 @@ print(f"零用錢: {money}")
 
 ----
 
-## elif
+## `elif`
 
 - 承上，如果考 90 分以上，也能得到 50 元獎勵。
 ```python
@@ -504,7 +504,7 @@ print(f"零用錢: {money}")
 
 ----
 
-## else
+## `else`
 
 - 除此之外，就必須多 60 分鐘讀書時間。
 ```python
@@ -522,7 +522,7 @@ print(f"讀書時間: {time}")
 
 ----
 
-## while
+## `while`
 
 - 巧克力還有啊～～請幫忙把巧克力吃完
 
@@ -535,7 +535,7 @@ while chocolate > 0:
 
 ----
 
-## for loop
+## `for loop`
 
 - 請小朋友跳 10 下跳繩
 - `range`：
@@ -564,7 +564,7 @@ for i in range(1, 11):
 ----
 
 
-## for loop
+## `for loop`
 
 - 請小朋友吹一小段直笛
 
@@ -694,6 +694,7 @@ def score_award(score: int, money: int, time: int) -> int:
   - 根據某個類別規則存在於電腦裡的資料
 - 類別：
   - 定義某一種類物件的行為與規則
+  - 方法 method 與 屬性 attribute
 
 ----
 ## 物件導向
