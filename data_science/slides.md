@@ -81,6 +81,14 @@
 ## 機器學習
 
 - 監督式學習 (Supervised Learning)
+- 非監督式學習 (Unsupervised Learning)
+- 半監督式學習 (Semi-supervised learning)
+- 增強式學習 (Reinforcement learning)
+- 自監督式學習 (Self-supervised learning)
+
+----
+
+- 監督式學習 (Supervised Learning)
   - 從成對的問題與答案的資料中找到規則，需要明確定義 (歸納/分類/標註) 問題的答案才能使用
   - 讓電腦看各種貓和狗的圖片 (1000張)，再拿一張新的圖片問電腦這是貓還是狗
 
@@ -114,7 +122,7 @@
 
 ## 機器學習
 
-- 半監督式學習（Semi-supervised learning）：
+- 半監督式學習 (Semi-supervised learning)
   - 一開始訓練用的資料，只有部份有標準答案，電腦只能透過這些有答案的資料找出特徵並且進行分類，隨後再依學習到的特徵，反覆推敲出所有資料的答案。
 
 
@@ -146,7 +154,7 @@
 
 ## 機器學習
 
-- 自監督式學習（Self-supervised learning）：
+- 自監督式學習 (Self-supervised learning)
   - 算是非監督式學習的一種，不同的是，利用此種方式可以將沒有標註的資料，產生標註並且學習。
 
 國民小學 → 國☐小學 → ☐：民
