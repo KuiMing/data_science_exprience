@@ -5,6 +5,14 @@
 
 <!-- .slide: data-background="media/Ben.png" -->
 
+----
+
+## 學歷
+
+- 醫學放射技術學系 <!-- .element: class="fragment" data-fragment-index="1" -->
+- 生物醫學資訊研究所 <!-- .element: class="fragment" data-fragment-index="2" -->
+
+
 ---
 
 ## Outline
