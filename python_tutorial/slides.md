@@ -194,9 +194,8 @@ print(string)
 
 ## 資料結構
 
-- 列表：
-  - `list`
-  - `tuple`
+- 串列：`list`
+- 元組：`tuple`
 - 集合：`set`
 - 字典：`dict`
 
@@ -206,7 +205,7 @@ print(string)
 
 
 
-## 列表 `list`
+## 串列 `list`
 
 - 有序且可變
 
@@ -232,8 +231,8 @@ False
 
 ----
 
-## 列表 `list`
-- 用 `list` 和 `range` 產生列表
+## 串列 `list`
+- 用 `list` 和 `range` 產生串列
 
 ```python
 data = list(range(5))
@@ -281,7 +280,7 @@ data.remove(67)
 ----
 
 
-## 列表 `tuple`
+## 元組 `tuple`
 
 
 - 有序且不可變
@@ -305,7 +304,7 @@ print(data)
 
 ----
 
-## 列表 `tuple`
+## 元組 `tuple`
 
 - 如果試著改變某個元素
 
@@ -316,8 +315,7 @@ data[2] = False
 
 ----
 
-## 列表
-- `list` 和 `tuple` 互換
+## `list` 和 `tuple` 互換
 
 ```python
 data = list(data)
