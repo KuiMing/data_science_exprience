@@ -224,7 +224,7 @@ data[2] = False
 print(data[2])
 ```
 ```
-0
+1
 [1, 'a']
 False
 ```
@@ -395,9 +395,10 @@ print(data - data_new)
 - 有序且可變
 - key 與 value 的組合
 - 可用 key 找到對應的 value
-- 只能查詢 key 是否存在於字典中，無法查詢 value
+- 只能查詢 key 是否存在於字典中，無法直接查詢 value
 ```python
 data = {"三月":"March", "四月":"April", "one":1}
+print(data)
 print(data["三月"]) # “March"
 print("三月" in data) # 印出True
 print("March" in data) # 印出False
@@ -448,11 +449,14 @@ print(data)
 print(data.keys())
 print(data.values())
 print(data.items())
+# 檢查 vlues 是否有 March
+print("March" in data.values()) 
 ```
 ```
 dict_keys(['三月', '四月', 1])
 dict_values(['March', 'April', 'one'])
 dict_items([('三月', 'March'), ('四月', 'April'), (1, 'one')])
+True
 ```
 
 
