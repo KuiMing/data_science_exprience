@@ -52,6 +52,8 @@
 
 Density-based spatial clustering of applications with noise
 
+### 分析手機使用者的GPS訊號
+
 ----
 
 ## POI
@@ -202,8 +204,9 @@ map_dbscan
 
 ---
 
-# K-Nearest Neighbors
+# `K-Nearest Neighbors`
 
+### 分析鳶尾花的花瓣與萼片
 
 ----
 
@@ -394,8 +397,9 @@ px.line(accuracy, x="k", y="accuracy", color="train", markers=True)
 
 ---
 
-# Linear Regression
+# `Linear Regression`
 
+### 分析風力發電機發電量與風速的關係
 
 ----
 
@@ -447,15 +451,15 @@ px.line(accuracy, x="k", y="accuracy", color="train", markers=True)
 ## 評估模型
 
 - Loss function
-- 找到讓誤差最小的參數
-  - 最小平方法
-  - <font color="red">Gradient Descent</font>
 
 
 $$
-Loss(a, b) = \sum _{i=1} ^n (Truth_i - y_i)^2 = \sum _{i=1} ^n (Truth_i - b + a \times x_i)^2
+Loss(a, b) = \sum _{i=1} ^n (Truth_i - y_i)^2 = 
 $$
 
+$$
+\sum _{i=1} ^n (Truth_i - b + a \times x_i)^2
+$$
 
 $$
 a^*, b^* = arg\ min\ Loss(a, b)
@@ -463,11 +467,26 @@ $$
 
 ----
 
-## Gradient Descent
+
+## 評估模型
+
+
+- 找到讓誤差最小的參數
+  - 最小平方法
+  - <font color="red">Gradient Descent</font>
 
 ----
 
+## `Gradient Descent`
+
+梯度下降法
+
+----
+
+Gradient Descent
+
 <!-- .slide: data-background="media/gradient_1.png" -->
+
 ----
 
 
@@ -477,6 +496,14 @@ $$
 
 <!-- .slide: data-background="media/gradient_3.png" -->
 
+
+----
+
+## `Backpropagation`
+
+- 反向傳播
+- 根據 Loss 的梯度，反推參數（a, b）
+- 讓 Loss 盡量變小
 
 ----
 
@@ -554,7 +581,9 @@ lr_plot(x_test, y_test, pred_test)
 
 ---
 
-# LeNet
+# `LeNet`
+
+### 偵測圖片中的數字
 
 ----
 
@@ -637,7 +666,7 @@ show_number(x_train[305, :,:])
 
 ----
 
-## LeNet
+## `LeNet`
 
 
 ![](media/Lenet.png)
@@ -651,7 +680,7 @@ show_number(x_train[305, :,:])
 ----
 
 
-## LeNet
+## `LeNet`
 
 - Deep Learning- CNN
   - Layer
@@ -668,7 +697,7 @@ show_number(x_train[305, :,:])
 ----
 
 
-## LeNet
+## `LeNet`
 
 
 ```python
@@ -705,9 +734,9 @@ model.fit(
 
 ----
 
-## Deep Learning
+## Deep Learning 深度學習
 
-- Based on Artificial Neural Network
+- Based on Artificial Neural Network 類神經網路
 
 ![](media/neuron.png)
 
@@ -740,23 +769,32 @@ model.fit(
 
 ## Convolutional Neural Network- CNN
 
+
+- 卷積神經網路
+- 圖像辨識
 - LeNet
-  - Convolution Layer 
-  - Maxpooling Layer
+  - Convolution Layer- 卷積層
+  - Maxpooling Layer- 最大池化層
   - Dense Layer
+    - Full-Connected Layer
+    - 全連接層
 
 
 
 ----
 
-## Covolution Layer
+## `Convolution Layer` 卷積層
 
 
 ![](media/Lenet_1.png)
 
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://medium.com/mlearning-ai/lenet-and-mnist-handwritten-digit-classification-354f5646c590</font>
+
+
 ----
 
-## Covolution Layer
+## `Convolution Layer`
 
 
 ![](media/cnn.png)
@@ -769,7 +807,7 @@ model.fit(
 
 ----
 
-## Covolution Layer
+## `Convolution Layer`
 
 ![](media/cnn.gif)
 
@@ -780,7 +818,7 @@ model.fit(
 
 ----
 
-## Covolution Layer
+## `Convolution Layer`
 
 ```python [6,8]
 from keras.models import Sequential, load_model
@@ -815,16 +853,22 @@ model.fit(
 ----
 
 
-## Maxpooling Layer
+## `Maxpooling Layer` 
+## 最大池化層
 
 ![](media/Lenet_2.png)
+
+
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://medium.com/mlearning-ai/lenet-and-mnist-handwritten-digit-classification-354f5646c590</font>
+
 
 ----
 
 
-## Maxpooling Layer
+## `Maxpooling Layer`
 
-![](output/media/Max_pooling.png)
+<img src=media/Max_pooling.png width="200%">
 
 
 <font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://en.wikipedia.org/wiki/Convolutional_neural_network</font>
@@ -832,7 +876,7 @@ model.fit(
 
 ----
 
-## Maxpooling Layer
+## `Maxpooling Layer`
 
 ```python [7,9 | 10]
 from keras.models import Sequential, load_model
@@ -866,21 +910,37 @@ model.fit(
 ----
 
 
-## Dense Layer
+## `Dense Layer` 全連接層
 
 ![](media/Lenet_3.png)
+
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://medium.com/mlearning-ai/lenet-and-mnist-handwritten-digit-classification-354f5646c590</font>
+
 
 ----
 
 
 <!-- .slide: data-background-color="#ffffff" -->
-## Dense Layer
+## `Dense Layer`
 Full-Connected Layer
 ![](media/Dense.svg)
 
 ----
 
-## Dense Layer
+## `LeNet`
+
+![](media/Lenet.png)
+
+- 萃取出圖片特徵
+- 根據圖片特徵判斷數字
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://medium.com/mlearning-ai/lenet-and-mnist-handwritten-digit-classification-354f5646c590</font>
+
+
+----
+
+## `Dense Layer`
 
 
 ```python [11-13]
@@ -914,7 +974,7 @@ model.fit(
 
 ----
 
-## Activation Function
+## `Activation Function`
 
 - 非線性
 - 電路開關或閥門
@@ -926,17 +986,17 @@ model.fit(
 
 ----
 
-## Tanh
+## `Tanh`
 
 $$
 tanh x = \frac{cosh x}{sinh x} = \frac{e^x - e^{-x}}{e^x + e^{-x}}
 $$
 ![](media/tanh.png)
 
----
+----
 
 
-## Tanh
+## `Tanh`
 
 ```python [6, 8, 11-12]
 from keras.models import Sequential, load_model
@@ -969,7 +1029,7 @@ model.fit(
 
 ----
 
-## softmax
+## `Softmax`
 
 $$
 \frac{e^{x_i}}{\sum _{i=1} ^{n} (e^{x_i})}
@@ -984,7 +1044,7 @@ $$
 
 
 
-## softmax
+## `Softmax`
 
 ```python [13]
 from keras.models import Sequential, load_model
@@ -1018,7 +1078,7 @@ model.fit(
 
 ----
 
-## One-Hot Encoding
+## `One-Hot Encoding`
 
 - 以 0 和 1 表示，相對應的種類為 1，其他為 0
 - 有幾個種類，就會有幾個數字
@@ -1027,9 +1087,16 @@ model.fit(
 
 ![](media/one_hot.png)
 
+
 ----
 
-## Cross Entropy
+## `One-Hot Encoding`
+
+![](media/one_hot_1.png)
+
+----
+
+## `Cross Entropy` 交叉熵
 
 $$
 \sum _{i=1} ^{n} - Truth_i \times log(Prediction_i)
@@ -1043,7 +1110,7 @@ $$
 ----
 
 
-## Cross Entropy- 極佳的情況
+## `Cross Entropy`- 極佳的情況
 ![](media/cross_entropy_2.png)
 
 Loss = 
@@ -1055,18 +1122,21 @@ $$
 (- 0 \times log(0.00001)) + (- 1 \times log(0.99999)) = 
 $$
 $$
-4.34 \times 10^{-6} \times 2 = $8.68 \times 10^{-6}
+4.34 \times 10^{-6} \times 2 = 8.68 \times 10^{-6}
 $$
 
 
 ----
 
 
-## Cross Entropy- 極糟的情況
+## `Cross Entropy`- 極糟的情況
 ![](media/cross_entropy_1.png)
 
 Loss = 
 total cross entropy = 
+
+-log(0.00001) + (-log(0.00001)) =
+
 5 + 5  = 10
 
 
@@ -1074,7 +1144,7 @@ total cross entropy =
 
 ----
 
-## Cross Entropy
+## `Cross Entropy`
 
 ![](media/cross_entropy_3.png)
 
@@ -1082,10 +1152,10 @@ total cross entropy =
 
 
 
-## Cross Entropy
+## `Cross Entropy`
 
 
-```python [14-16|17-18|20-26]
+```python [14-16|17|19-26]
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Dropout, Conv2D, MaxPooling2D, Flatten, Input
 from tensorflow.keras.utils import to_categorical
@@ -1102,9 +1172,9 @@ model.add(Dense(10, activation="softmax"))
 model.compile(
         optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"]
     )
-x_train = x_train / 255 # Normalize
 y_train = to_categorical(label) # One-hot encoding
 
+x_train = x_train / 255 # Normalize
 model.fit(
         x_train,
         y_train,
@@ -1121,7 +1191,10 @@ model.fit(
 
 ![](media/normalization.jpeg)
 
-<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://towardsdatascience.com/how-to-calculate-the-mean-and-standard-deviation-normalizing-datasets-in-pytorch-704bd7d05f4c</font>
+- 提升收斂速度
+- 提高精準度
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://ai-pool.com/a/s/normalization-in-deep-learning</font>
 
 
 ----
@@ -1184,12 +1257,26 @@ model.evaluate(x_test, y_test)
 
 
 
-# Face Recognition
+# `Face Recognition`
 
+人臉辨識
 
 ----
 
 
+
+## Face Detection
+
+![](media/face_5.png)
+
+----
+
+## Face Landmark 
+### 臉部特徵點
+
+![](media/face_9.png)
+
+----
 
 ### Face Recognition Flow
 
@@ -1257,6 +1344,9 @@ model.evaluate(x_test, y_test)
 
 ## 掛載 google drive
 
+- 先在自己的雲端硬碟新增 `photo` 資料夾
+- 請自行上傳自己的照片，放到 `photo` 資料夾
+- 執行以下程式
 ```python
 import glob
 import pickle
@@ -1267,9 +1357,8 @@ from google.colab import drive
 # 將自己的雲端硬碟掛載上去
 drive.mount('/content/gdrive')
 files = glob.glob("gdrive/MyDrive/photo/*")
-
-
 ```
+
 
 ----
 
@@ -1284,22 +1373,50 @@ for img in files:
   face_encodings.append(encoding[0])
   face_names.append(img.replace("gdrive/MyDrive/photo/", "").split(".")[0])
 ```
-請自行上傳自己的照片
 
 ----
 
 ## 測試新照片
 
-請記得上傳自己的照片
+
 ```python
-# 檔名記得改成自己照片的檔名，不要照抄
-image = face_recognition.load_image_file("Ben_0525.png")
-face_enco = face_recognition.face_encodings(image)
-# 一一比對新照片的特徵向量與資料集之間的距離
-distances = face_recognition.face_distance(face_encodings, face_enco[0])
-# 選擇距離最小的名字
-face_names[np.argmin(distances)]
+def who_are_you(file, face_names, face_encodings):
+  # 讀取照片
+  image = face_recognition.load_image_file(file)
+  # 一一比對新照片的特徵向量與資料集之間的距離
+  face_enco = face_recognition.face_encodings(image)
+  distances = face_recognition.face_distance(face_encodings, face_enco[0])
+  print("與每個人的距離：")
+  for name, d in zip(face_names, distances):
+    print(f"{name}: {d:.2f}")
+  print("===========")
+  if min(distances) < 0.5:
+    print("你是")
+    # 選擇距離最小的名字，前提是距離要小於 0.5
+    print(face_names[np.argmin(distances)])
+  else:
+    print("我不知道這是誰")
+```
+
+----
+
+## 測試新照片
+
+- 請上傳自己的照片到 `colab`
+- 可以用別人的照片玩玩看
+
+```python
+# 這邊檔名改成自己上傳照片的檔名，不要照抄
+who_are_you("face.png", face_names, face_encodings)
 ```
 ```
+與每個人的距離：
+D: 0.66
+C: 0.51
+B: 0.68
+A: 0.80
+Ben: 0.38
+===========
+你是
 Ben
 ```
