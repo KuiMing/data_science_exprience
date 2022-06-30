@@ -14,6 +14,10 @@
 
 ## 今天就是先實作一波吧
 
+- 用現成的 code ，直接做成 chatbot 
+- 利用 github 和 heroku
+- 會分階段執行，不同階段會有不同功能
+
 ----
 
 <img src=media/chatbot.png width="70%">
@@ -179,10 +183,9 @@ https://github.com/KuiMing/heroku_linebot
 
 ## Open Web Application
 
+<!-- .slide: data-background-color="#ffffff" data-background="media/heroku_21.png" -->
 
-![](media/heroku_21.png)
-
-
+按右上角的 `Open app`
 ```
 Hello World!!!!!
 ```
@@ -226,7 +229,7 @@ if __name__ == "__main__":
 ----
 
 ## 建立 Messaging API channel
-- 進入 https://account.line.biz/login
+- 進入 https://developers.line.biz/
 - 使用 LINE 帳號登入
 - 找到 Providers
   - 按下 Create 
