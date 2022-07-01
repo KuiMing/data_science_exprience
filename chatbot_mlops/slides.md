@@ -293,9 +293,28 @@ if __name__ == "__main__":
 - 找到Webhook URL
   - 點擊Edit
   - 填上 Azure Web APP 的 URL 加上 <font color='#00BD3C'>/callback</font>
-    - example: https://<YOUR WEB APP NAME>.azurewebsites.net/callback
+    - example: https://你的app名稱.herokuapp.com/callback
   - 點擊Verify
 - 開啟 <font color='#00BD3C'>Use Webhook</font>
+
+----
+
+
+### Webhook setting
+
+點選 Auto-reply message 的 Edit，開啟下一頁的畫面
+![](media/line_10.png)
+
+----
+
+### Webhook setting
+
+
+請照此圖作設定
+
+![](media/line_11.png)
+
+
 
 ----
 
@@ -303,7 +322,7 @@ if __name__ == "__main__":
 
 ![](media/line_4.png)
 
-
+記得要使用 webhook
 
 ----
 
@@ -721,9 +740,7 @@ if __name__ == "__main__":
 
 # LSTM
 
-
-----
-
+Long Short-Term Memory
 
 ----
 
