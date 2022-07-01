@@ -229,7 +229,7 @@ if __name__ == "__main__":
 ----
 
 ## 建立 Messaging API channel
-- 進入 https://developers.line.biz/
+- 進入 https://developers.line.biz/console/
 - 使用 LINE 帳號登入
 - 找到 Providers
   - 按下 Create 
@@ -724,12 +724,38 @@ if __name__ == "__main__":
 
 ----
 
+
+----
+
+## Neuron 神經元
+
+![](media/play_ground.png)
+
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://playground.tensorflow.org/</font>
+
+----
+
+## 每個 LSTM 的神經元做的事情
+
 ![](media/LSTM_2.png)
 
 
 
 
 <font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://ithelp.ithome.com.tw/articles/10223055</font>
+
+
+
+
+----
+
+## LSTM 的神經元串在一起
+
+
+![](media/LSTM_4.png)
+
+<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://www.researchgate.net/figure/The-LSTM-unit-contain-a-forget-gate-output-gate-and-input-gate-The-yellow-circle_fig2_338717757</font>
 
 
 
@@ -745,14 +771,6 @@ if __name__ == "__main__":
 
 <font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://www.researchgate.net/figure/The-LSTM-unit-contain-a-forget-gate-output-gate-and-input-gate-The-yellow-circle_fig2_338717757</font>
 
-----
-
-## Just like Neuron
-
-![](media/play_ground.png)
-
-
-<font size=2 color="#33C7FF" style="position: absolute; top: 650px; left: 50px">https://playground.tensorflow.org/</font>
 
 
 ----
